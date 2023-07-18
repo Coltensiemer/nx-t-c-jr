@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="mb-32 grid gap-8 text-center lg:mb-0 lg:grid-cols-3 lg:text-left">
         <Link
-          href="challenge1"
+          href="password"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
@@ -34,7 +34,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/challenge3"
+          href="/bubble"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100"
         >
           <h2 className={`mb-3 text-2xl font-semibold`}>
