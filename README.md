@@ -1,3 +1,41 @@
+# CHALLENGE #1 - Phone password
+
+- [ ] Add the ability to check if clicked numbers match the password. (Password is 62751)
+- [ ] If the password is correct, display a success message.
+- [ ] After 2 seconds, remove the message from the screen and reset the password input.
+- [ ] If the password is incorrect, display a failure message.
+- [ ] After 2 seconds, remove the message from the screen and reset the password input.
+
+# CHALLENGE #2 - GROCERY STORE
+
+### STORY
+
+Imagine there is system online that has 5 queues each queue can have N number of customers with N items. The system will process the queue with the lowest items first. If there are two queues with the same number of items, the queue that was added first will be processed first. If there are no customers in the store, the system will display a message saying "There are no customers in the store".
+
+### VISUALIZATION
+
+[2] -- [-] -- [5] -- [1] -- [4]
+[9] -- [-] -- [-] -- [-] -- [2]
+[3] -- [-] -- [4] -- [-] -- [2]
+
+### TODO
+
+- [ ] Add the ability to add a customer to a queue with a number of items. The customers should be add to the queue with the lowest number of items. If there are two queues with the same number of items, the customer should be added to the first one.
+- [ ] Every 1 second, the system should process the queue with the lowest number of items. If there are two queues with the same number of items, the queue that was added first should be processed first.
+- [ ] If there are no customers in the store, the system should display a message saying "There are no customers in the store".
+- [] The system should display the number of customers in each queue. if there are no customers in a queue, the system should display a dash (-).
+
+#### HINTS (WE ARE USING REACT)
+
+- [ ] Use `setInterval` to process the queue every 1 second.
+- [ ] Use `setTimeout` to remove the message after 2 seconds.
+- [ ] Represent the system as an array of arrays.
+- [ ] Represent each queue as an array.
+- [ ] Represent each customer as a number in the queue array.
+- [ ] Use `useState` to store the system.
+- [ ] Use `useEffect` to process the queue every 1 second.
+- [ ] Use `map` to display the system.
+
 # CHALLENGE #3
 
 - [ ] Add the ability to click on a section of the page and have it add a blue circle thats 12 by 12 pixels.
