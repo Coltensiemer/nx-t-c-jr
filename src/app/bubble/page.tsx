@@ -1,5 +1,6 @@
 'use client';
 import { Challenge3 } from '@/Challenge3/Challenge';
+import { collectGenerateParams } from 'next/dist/build/utils';
 import React, { useEffect, useState } from 'react';
 import { GenericType } from 'typescript';
 import { inflate } from 'zlib';
@@ -25,26 +26,37 @@ export default function Challenge() {
   const [isColorSwitch, setColorSwitch] = useState<boolean>(true)
 
  
-  
+// get click data points
+//set the click data points
+//
+      
 
 
-  const getMousePosition = (event: React.MouseEvent<HTMLDivElement>) => {
+const getMousePosition = (event: React.MouseEvent<HTMLDivElement>) => {
+  const colorSwitch = isColorSwitch ? 'blue' : 'red';
+  const randomNumber = Math.floor(Math.random() * 19) + 6;
 
-    
-    const samePosition = isMousePosition.find((item) => event.clientX === item.x && event.clientY === item.y)
-    const colorSwitch = isColorSwitch ? 'blue' : 'red'
-    const randomNumber = Math.floor(Math.random() * 19) + 6
-if (!samePosition) {
+  setUndoDisabledButtons(false);
+
+  const samePosition = isMousePosition.find(
+    (item) => event.clientX === item.x && event.clientY === item.y
+  );
+
+  if (samePosition) {
+    setMousePosition((prev) =>
+      prev.map((item) =>
+        event.clientX === item.x && event.clientY === item.y
+          ? { ...item, color: 'blue' }
+          : item
+      )
+    );
+  } else {
     setMousePosition((prev) => [
       ...prev,
-      { x: event.clientX, y: event.clientY, color:colorSwitch, random: randomNumber },
+      { x: event.clientX, y: event.clientY, color: 'red', random: randomNumber },
     ]);
-  } 
-  else {  
-  };
   }
-console.log(isMousePosition)
-
+};
 
   function undoDot() {
     //@ts-ignore
